@@ -1,0 +1,72 @@
+{% extends 'index.html' %}
+
+{% block content %}
+
+
+
+<div class="container">
+	<img src="{{ url_for('static', filename='images/shop/advertisement.jpg')}}" alt="" style="width: 1170px; margin-bottom: 40px;"/>
+</div>
+
+
+
+
+<section>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-3">
+					<div class="left-sidebar">
+						<h2>Category</h2>
+						<div class="panel-group category-products" id="accordian"><!--category-productsr-->
+							<div class="panel panel-default">
+								{% for c in genr %}
+								<div class="panel-heading">
+									<h4 class="panel-title"><a href="/product/{{boo}}">{{c.genre}}</a>{{c.genre}}</h4>
+								</div>
+								{% endfor %}
+							</div>	
+						</div><!--/category-products-->
+					    
+					
+					</div>
+				</div>
+				
+				<div class="col-sm-9 padding-right">
+					<div class="features_items"><!--features_items-->
+						<h2 class="title text-center">Features Items</h2>
+						{% for book_ in pro %} 
+						<div class="col-sm-4">
+							<div class="product-image-wrapper">
+								<div class="single-products">
+										<div class="productinfo text-center">
+											<a href="{{ url_for('books', id=book_.id) }}"><img src="{{ url_for('static', filename='images/') }}{{ book_.img_url }}" alt="" /></a>
+											<h2>{{book_.price}}{{book_.currency}}</h2>
+											<p>{{book_.name}}</p>
+											<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+										</div>
+										
+								</div>
+								<div class="choose">
+									<ul class="nav nav-pills nav-justified">
+										<li><a href="#"><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
+										<li><a href="#"><i class="fa fa-plus-square"></i>Add to compare</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						{% endfor %}
+
+						
+						<ul class="pagination">
+							<li class="active"><a href="">1</a></li>
+							<li><a href="">2</a></li>
+							<li><a href="">3</a></li>
+							<li><a href="">&raquo;</a></li>
+						</ul>
+					</div><!--features_items-->
+				</div>
+			</div>
+		</div>
+</section>
+
+{% endblock %}

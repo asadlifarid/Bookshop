@@ -1,0 +1,90 @@
+c = Comments('User1', 'user1@gmail.com', 'Recommended')
+
+c1 = Comments('User2', 'user2@gmail.com', "Don't recommend")
+
+c2 = Comments('User3', 'user3@gmail.com', "So interesting!!!")
+
+c3 = Comments('User4', 'user4@gmail.com', "Nice")
+
+c4 = Comments('User5', 'user5@gmail.com', "Good")
+
+c5 = Comments('User6', 'user6@gmail.com', 'Bad')
+
+
+
+
+---- genre
+
+g = Genre('Detective')
+
+g1 = Genre('3D BOOK')
+
+g2 = Genre('AKADEMIK')
+
+g3 = Genre('Bizness')
+
+
+
+
+------language
+
+l = Language('English')
+
+
+----- book
+
+b = Book('Kim deyir ki, bacarmazsan?!', 'Deniel Çidiak', 5.99, 'book1.jpeg', 'Some text', 3, 'TEAS press', 1, 4, 1)
+
+b1 = Book('Sən həyatını yaxşılaşdıra bilərsən', 'Luiza Hey', 20.99, 'book2.jpeg', 'Some text', 1, 'Ali Nino', 2, 4, 3)
+
+b2 = Book('Şirin portağal ağacım', 'Joze Mauru di Vaskonselos', 10, 'book3.jpeg', 'Some text', 2, 'Ali Nino', 3, 2, 4)
+
+b1 = Book('Kürk Mantolu Madonna', 'Sebahattin Ali', 3.66, 'book2.jpeg', 'Some text', 2, 'Ali Nino', 1, 1, 1)
+
+b2 = Book('Abşeron yarımadamı', 'Ramil Əhməd', 6.99, 'book4.jpeg', 'Some text', 1, 'Libraff', 3, 3, 6)
+
+b3 = Book('Şirin portağal ağacım', 'Joze Mauru di Vaskonselos', 10, 'book5.jpeg', 'Some text', 2, 'Ali Nino', 1, 2, 5)
+
+b4 = Book('Tələbə', 'Tara Uestover', 3.85, 'book6.jpeg', 'Some text', 3, 'Libraff', 1, 4, 3)
+
+b5 = Book('Stephen King', 'Stephen Edwin King', 15.99, 'book7.jpeg', 'Some text', 4, 'Amazon', 3, 1, 2)
+
+b6 = Book('Dr. Watson', 'Sherlock Holmes', 26.67, 'book8.jpeg', 'Some text', 2, 'Libraff', 2, 1, 1)
+
+b7 = Book('1000 Words: STEM', 'Jules Pottle', 2.88, 'book9.jpeg', 'Some text', 1, 'Ali Nino', 2, 3, 1)
+
+b8 = Book('101 Soruda Kuantum', 'Kenneth W. Ford', 7.99, 'book10.jpeg', 'Some text', 1, 'TEAS press', 2, 3, 3)
+
+b9 = Book('21.Yüzyıl için 21 Ders', 'Yuval Noah Harari', 6.99, 'book11.jpeg', 'Some text', 5, 'Amazon', 2, 2, 4)
+
+b10 = Book('A Maigret Christmas And Other Stories', 'Georges Simenon', 4.88, 'book12.jpeg', 'Some text', 3, 'Kitabyurdu.com', 2, 1, 1)
+
+
+
+
+
+# class Comments(db.Model):
+#     id = db.Column(db.Integer(), primary_key=True)
+#     name = db.Column(db.String(255), nullable = False)
+#     email = db.Column(db.String(30), nullable = False)
+#     comment = db.Column(db.String(255))
+#     created_at = db.Column(db.DateTime, nullable = False, default =datetime.now)
+#     updated_at = db.Column(db.DateTime, onupdate=datetime.now)
+#     rev = db.relationship('Book', backref = 'comments')
+
+
+    
+    # def __init__(self, name, email, comment):
+    #     self.name = name
+    #     self.email = email
+    #     self.comment = comment
+
+
+
+    # def __repr__(self):
+    #     return self.name
+
+    
+    # def save(self):
+    #     db.session.add(self)
+    #     db.session.commit()
